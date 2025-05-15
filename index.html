@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>回り将棋</title>
+
+  <script src="jquery/jquery-3.6.0.min.js"></script>
+
+  <meta charset="utf-8" />
+  <script src="huru.js"></script>
+  <script src="index.js"></script>
+  <script src="1.js"></script>
+  <script src="2.js"></script>
+
+  <style>
+      #output{
+          float: left;
+
+          display:none;
+      }
+      #output2{
+          float: right;
+          
+          display:none;
+      }
+
+      img{
+        width: 1.5cm;
+      }
+
+      #masu{
+        z-index: 1;
+      }
+      #masu2{
+        position:absolute; top:0%; right:0%;
+      }
+      .hurigoma{
+        width: 5em;
+      }
+      .hurigoma_otita{
+        width: 3em;
+      }
+
+      #turn{
+        top: -300px;
+        
+      }
+
+      .player{
+        width: 200px;
+      }
+      #player1{
+        position: relative;
+      }
+      #player2{
+        position: relative;
+        width: 140px;
+      }
+
+      #play1_koma{
+        width: 7em;
+        float: right;
+      }
+      #play2_koma{
+        float: right;
+        width: 7em;
+        transform:rotate(180deg);
+      }
+      #koma_and_masu2{
+        float:right;
+      }
+  </style>
+</head>
+<body>
+    
+  <!--<input type="button" value="スタート" onclick='start_();' /><br />-->
+  <input type="button" value="振り駒をする" onmousedown="if(turn_1_ok){huru_time();}" onmouseup='if(turn_1_ok){huru();}' /><br />
+  <br>
+
+  <table>
+    <td>
+      <div id="masu"></div>
+
+      <div id="play1"></div>
+      <div id="play2"></div>
+    </td>
+    <td>
+      <div id="turn">
+        <img class='player' id='player2' src='robot.jpg'>
+        <br>
+        <img class='player' id='player1' src='player.jpg'>
+
+      </div>
+    </td>
+    <td>
+      <div id="out">
+        <div id="output"></div>
+      </div>
+    </td>
+
+    <td>
+      <img id="play1_koma">
+      <img id="play2_koma">
+    </td>
+    </table>
+    <div id="masu2"></div>
+    <div id="output2"></div>
+  </body>
+</html>
