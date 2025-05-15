@@ -11,6 +11,8 @@
 
 1. このリポジトリをクローンまたはダウンロードします。
 2. `index.html` をブラウザで開きます。
+## デモ
+https://ken7python.github.io/MawariShogi/
 
 ## 使い方
 
